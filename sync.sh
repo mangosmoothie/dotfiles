@@ -8,7 +8,7 @@ function () {
     else
         git clone \
             https://github.com/zsh-users/zsh-completions \
-            $completions
+            $completions;
     fi
 
     local autosuggestions=$zsh_custom/plugins/zsh-autosuggestions
@@ -17,8 +17,13 @@ function () {
     else
         git clone \
             https://github.com/zsh-users/zsh-autosuggestions \
-            $autosuggestions
+            $autosuggestions;
     fi
+}
+
+# get ez-pz zsh-theme
+function() {
+    curl -fsSL 'https://raw.githubusercontent.com/mangosmoothie/ez-pz/master/ez-pz.zsh-theme' -o ~/.oh-my-zsh/themes/ez-pz.zsh-theme;
 }
 
 # sync all files and source shell dotfiles
@@ -33,4 +38,4 @@ function () {
     source ~/.zprofile;
     source ~/.zshrc;
 }
-echo "jobs done."
+echo "jobs done.";
