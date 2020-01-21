@@ -1,5 +1,5 @@
 export ZSH="$HOME/.oh-my-zsh"
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin"
 export PATH="$HOME/bin/apache-storm-1.0.6/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$HOME/.jenv/bin:$PATH"
