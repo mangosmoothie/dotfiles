@@ -30,7 +30,7 @@ function() {
 function () {
 	  rsync --exclude ".git/" \
 		--exclude ".DS_Store" \
-                --exclude ".gitignore"
+    --exclude ".gitignore" \
 		--exclude "sync.sh" \
 		--exclude "README.md" \
 		--exclude "LICENSE" \
