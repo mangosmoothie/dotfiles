@@ -29,11 +29,12 @@ function() {
 # sync all files and source shell dotfiles
 function () {
 	  rsync --exclude ".git/" \
-		      --exclude ".DS_Store" \
-		      --exclude "sync.sh" \
-		      --exclude "README.md" \
-		      --exclude "LICENSE" \
-		      -avh --no-perms . ~;
+		--exclude ".DS_Store" \
+                --exclude ".gitignore"
+		--exclude "sync.sh" \
+		--exclude "README.md" \
+		--exclude "LICENSE" \
+		-avh --no-perms . ~;
 
     source ~/.zprofile;
     source ~/.zshrc;
