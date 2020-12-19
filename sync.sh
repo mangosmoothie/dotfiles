@@ -1,5 +1,5 @@
 # get / update oh-my-zsh plugins
-function () {
+function() {
     local zsh_custom=${ZSH_CUSTOM:-~/.oh-my-zsh/custom}
     local completions=$zsh_custom/plugins/zsh-completions
     ( cd ~/.oh-my-zsh ; git pull origin master )
