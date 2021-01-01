@@ -5,7 +5,9 @@
 requires git, zsh, autojump, [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh)
 
 ```
-brew install git zsh autojump
+brew tap d12frosted/emacs-plus
+
+brew install git zsh autojump aspell cmake coreutils fd ripgrep emacs-plus borkdude/brew/clj-kondo
 ```
 
 oh-my-zsh should be installed manually
