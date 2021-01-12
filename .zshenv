@@ -1,5 +1,6 @@
 export ZSH="$HOME/.oh-my-zsh"
 export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin"
+export PATH="/usr/local/share/dotnet:$PATH"
 export PATH="$HOME/.emacs.d/bin:$PATH"
 export PATH="$HOME/bin:$PATH"
 export JAVA_OPTS='-Dhttps.proxyHost=localhost -Dhttps.proxyPort=4444'
@@ -16,4 +17,6 @@ alias ag="ag --hidden --ignore .git"
 alias lg="git log --color --pretty=format:'%C(auto)%h %Cred %<(10,trunc)%an %Creset%C(auto)%s %Cgreen(%cr,%ar) %Creset%C(auto)%d'"
 
 source "$HOME/miniconda3/etc/profile.d/conda.sh"
+
+export SDKMAN_DIR="/Users/wz9fht/.sdkman"
 source "$HOME/.sdkman/bin/sdkman-init.sh"

@@ -82,6 +82,4 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-. ~/miniconda3/etc/profile.d/conda.sh
-
 autoload -U compinit && compinit
