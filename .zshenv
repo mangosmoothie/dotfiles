@@ -6,7 +6,7 @@ export PATH="$HOME/bin:$PATH"
 export REPORTTIME=3
 alias ag="ag --hidden --ignore .git"
 alias lg="git log --color --pretty=format:'%C(auto)%h %Cred %<(10,trunc)%an %Creset%C(auto)%s %Cgreen(%cr,%ar) %Creset%C(auto)%d'"
-alias gg="rg --hidden -g '!.git'"
+alias rg="rg --hidden -g '!.git'"
 alias yarn-login="aws codeartifact login --tool npm --repository ig --domain innovation-garage --region us-east-1 --profile ig-dev-bcbsnc"
 
 source "$HOME/projects/.miniconda3/etc/profile.d/conda.sh"
