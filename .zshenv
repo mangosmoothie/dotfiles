@@ -1,7 +1,7 @@
 export ZSH="$HOME/.oh-my-zsh"
 export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin"
 export PATH="$HOME/.emacs.d/bin:$PATH"
-export PATH="$HOME/bin:$PATH"
+export PATH="$HOME/projects/.bin:$PATH"
 # report on long running processes - execution time, etc.
 export REPORTTIME=3
 alias ag="ag --hidden --ignore .git"
