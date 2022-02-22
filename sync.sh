@@ -36,7 +36,7 @@ function () {
           --exclude "LICENSE" \
           -avh --no-perms . ~;
 
-    source ~/.zprofile;
+    source ~/.zshenv;
     source ~/.zshrc;
 }
 echo "jobs done.";

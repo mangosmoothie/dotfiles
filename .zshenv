@@ -7,14 +7,14 @@ export REPORTTIME=3
 alias ag="ag --hidden --ignore .git"
 alias lg="git log --color --pretty=format:'%C(auto)%h %Cred %<(10,trunc)%an %Creset%C(auto)%s %Cgreen(%cr,%ar) %Creset%C(auto)%d'"
 alias gg="rg --hidden -g '!.git'"
-alias yarn-login="aws codeartifact login --tool npm --repository ig --domain innovation-garage --region us-east-1 --profile admin-ig-dev-bcbsnc"
+alias yarn-login="aws codeartifact login --tool npm --repository ig --domain innovation-garage --region us-east-1 --profile ig-dev-bcbsnc"
 
-source "$HOME/miniconda3/etc/profile.d/conda.sh"
+source "$HOME/projects/.miniconda3/etc/profile.d/conda.sh"
 
-export SDKMAN_DIR="/Users/u135990/.sdkman"
-source "$HOME/.sdkman/bin/sdkman-init.sh"
+export SDKMAN_DIR="$HOME/projects/.sdkman"
+source "$HOME/projects/.sdkman/bin/sdkman-init.sh"
 
-export AWS_CA_BUNDLE="/Users/u135990/.bcbsnc/ca-combined.pem"
-export NODE_EXTRA_CA_CERTS="/Users/u135990/.bcbsnc/ca-combined.pem"
-export REQUESTS_CA_BUNDLE="/Users/u135990/.bcbsnc/ca-combined.pem"
-
+export AWS_CA_BUNDLE="$HOME/.bcbsnc/ca-combined.pem"
+export NODE_EXTRA_CA_CERTS="$HOME/.bcbsnc/ca-combined.pem"
+export REQUESTS_CA_BUNDLE="$HOME/.bcbsnc/ca-combined.pem"
+export XDG_CONFIG_HOME="$HOME/projects/.nvm"
