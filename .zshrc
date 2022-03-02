@@ -84,7 +84,7 @@ source $ZSH/oh-my-zsh.sh
 
 autoload -U compinit && compinit
 
-alias ls="exa -1"
+alias ls="exa -la --git --git-ignore --ignore-glob=.git --no-user --no-permissions --no-time --no-filesize"
 alias la="exa -la --git --git-ignore --ignore-glob=.git --no-user"
 alias lt="exa -Ta --git --git-ignore --ignore-glob=.git --no-user"
 alias lT="exa -la --git --git-ignore --ignore-glob=.git --no-user --no-permissions --sort=changed"
