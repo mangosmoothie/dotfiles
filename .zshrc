@@ -84,10 +84,10 @@ source $ZSH/oh-my-zsh.sh
 
 autoload -U compinit && compinit
 
-alias ls="exa -la --git --git-ignore --ignore-glob=.git --no-user --no-permissions --no-time --no-filesize"
-alias la="exa -la --git --git-ignore --ignore-glob=.git --no-user"
-alias lt="exa -Ta --git --git-ignore --ignore-glob=.git --no-user"
-alias lT="exa -la --git --git-ignore --ignore-glob=.git --no-user --no-permissions --sort=changed"
+alias ls="exa -la --git --ignore-glob=.git --no-user --no-permissions --no-time --no-filesize"
+alias la="exa -la --git --ignore-glob=.git --no-user"
+alias lt="exa -Ta --git --ignore-glob=.git --no-user"
+alias lT="exa -la --git --ignore-glob=.git --no-user --no-permissions --sort=changed"
 
 export NVM_DIR="$HOME/projects/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
