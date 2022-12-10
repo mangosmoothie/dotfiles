@@ -89,6 +89,5 @@ alias la="exa -la --git --ignore-glob=.git --no-user"
 alias lt="exa -Ta --git --ignore-glob=.git --no-user"
 alias lT="exa -la --git --ignore-glob=.git --no-user --no-permissions --sort=changed"
 
-export NVS_HOME="$HOME/Documents/bcbsnc/projects/.nvs"
-export NVS_HOME="$HOME/Documents/bcbsnc/projects/.nvs"
+export NVS_HOME="$HOME/.nvs"
 [ -s "$NVS_HOME/nvs.sh" ] && . "$NVS_HOME/nvs.sh"
