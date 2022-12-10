@@ -7,8 +7,7 @@ export REPORTTIME=3
 alias ag="ag --hidden --ignore .git"
 alias lg="git log --color --pretty=format:'%C(auto)%h %Cred %<(10,trunc)%an %Creset%C(auto)%s %Cgreen(%cr,%ar) %Creset%C(auto)%d'"
 alias rg="rg --hidden -g '!.git'"
-source "$HOME/projects/.miniconda3/etc/profile.d/conda.sh"
+source "$HOME/miniconda3/etc/profile.d/conda.sh"
 
-export SDKMAN_DIR="$HOME/projects/.sdkman"
-source "$HOME/projects/.sdkman/bin/sdkman-init.sh"
-export JAVA_HOME=$(/usr/libexec/java_home)
+export SDKMAN_DIR="$HOME/.sdkman"
+source "$HOME/.sdkman/bin/sdkman-init.sh"
