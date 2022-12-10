@@ -21,6 +21,6 @@ let &t_SI.="\e[5 q"
 let &t_EI.="\e[1 q"
 let &t_te.="\e[0 q"
 " fd is now Esc when typed quickly
-:imap fd <Esc>
+inoremap fd <Esc>
 " Use UTF-8 without BOM
 set encoding=utf-8 nobomb

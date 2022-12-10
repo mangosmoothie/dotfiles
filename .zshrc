@@ -5,7 +5,7 @@
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="2ez"
+ZSH_THEME="ez-pz"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -89,9 +89,6 @@ alias la="exa -la --git --ignore-glob=.git --no-user"
 alias lt="exa -Ta --git --ignore-glob=.git --no-user"
 alias lT="exa -la --git --ignore-glob=.git --no-user --no-permissions --sort=changed"
 
-# export NVM_DIR="$HOME/projects/.nvm"
-# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 export NVS_HOME="$HOME/Documents/bcbsnc/projects/.nvs"
 export NVS_HOME="$HOME/Documents/bcbsnc/projects/.nvs"
 [ -s "$NVS_HOME/nvs.sh" ] && . "$NVS_HOME/nvs.sh"
