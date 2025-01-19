@@ -2,10 +2,11 @@
 
 ## Prerequisites
 
-```
-brew tap d12frosted/emacs-plus
+- Install [homebrew](https://brew.sh)
+- Install [nvs](https://github.com/jasongin/nvs)
 
-brew install git zsh autojump exa aspell cmake coreutils fd ripgrep emacs-plus
+```
+brew install autojump exa fd ripgrep
 ```
 
 oh-my-zsh should be installed manually

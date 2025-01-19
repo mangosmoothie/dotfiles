@@ -84,10 +84,10 @@ source $ZSH/oh-my-zsh.sh
 
 autoload -U compinit && compinit
 
-alias ls="exa -la --git --ignore-glob=.git --no-user --no-permissions --no-time --no-filesize"
-alias la="exa -la --git --ignore-glob=.git --no-user"
-alias lt="exa -Ta --git --ignore-glob=.git --no-user"
-alias lT="exa -la --git --ignore-glob=.git --no-user --no-permissions --sort=changed"
+alias ls="eza -la --git --ignore-glob=.git --no-user --no-permissions --no-time --no-filesize"
+alias la="eza -la --git --ignore-glob=.git --no-user"
+alias lt="eza -Ta --git --ignore-glob=.git --no-user"
+alias lT="eza -la --git --ignore-glob=.git --no-user --no-permissions --sort=changed"
 
 export NVS_HOME="$HOME/.nvs"
 [ -s "$NVS_HOME/nvs.sh" ] && . "$NVS_HOME/nvs.sh"
