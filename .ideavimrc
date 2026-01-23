@@ -1,8 +1,24 @@
-" Selected Intellimacs modules
-source ~/.intellimacs/spacemacs.vim
-source ~/.intellimacs/extra.vim
-source ~/.intellimacs/major.vim
-" source ~/.intellimacs/hybrid.vim
-" My own .vimrc
-source ~/.vimrc
+"  buffers and files
+nnoremap <Space>bb :action RecentFiles<CR>
+nnoremap <Space>ff :action GotoFile<CR>
+nnoremap <Space>pf :action GotoFile<CR>
+nnoremap <Space>sp :action FindInPath<CR>
+nnoremap <Space>ss :action SaveAll<CR>
+nnoremap <Space>wq :action CloseContent<CR>
+nnoremap <Space>qq :action CloseContent<CR>
+nnoremap <Space>w/ :action SplitVertically<CR>
+
+"   text editing
+nmap <Space>;; :action CommentByLineComment<CR>
+vmap <Space>;; :action CommentByLineComment<CR>
+
+"  misc
+nnoremap <Space><Space> :action GotoAction<CR>
+
+" AceJump
+nnoremap <Space>jj :action AceAction<CR>
+nnoremap <Space>jl :action AceLineAction<CR>
+nnoremap <Space>jw :action AceTargetAction<CR>
+
 set easymotion
+source ~/.vimrc
