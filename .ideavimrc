@@ -8,6 +8,7 @@ nnoremap <Space>wq :action CloseContent<CR>
 nnoremap <Space>qq :action CloseContent<CR>
 nnoremap <Space>w/ :action SplitVertically<CR>
 nnoremap <Space>tt :action ActivateTerminalToolWindow<CR>
+nnoremap <Space><Tab> :action PreviousTab<CR>
 
 "   text editing
 nmap <Space>;; :action CommentByLineComment<CR>
