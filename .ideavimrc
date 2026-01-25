@@ -1,26 +1,45 @@
-"  buffers and files
+" buffers
 nnoremap <Space>bb :action RecentFiles<CR>
+nnoremap <Space>bs :action Switcher<CR>
+" files
 nnoremap <Space>ff :action GotoFile<CR>
 nnoremap <Space>pf :action GotoFile<CR>
 nnoremap <Space>sp :action FindInPath<CR>
 nnoremap <Space>ss :action SaveAll<CR>
+" windows
 nnoremap <Space>wq :action CloseContent<CR>
 nnoremap <Space>qq :action CloseContent<CR>
 nnoremap <Space>w/ :action SplitVertically<CR>
-nnoremap <Space>tt :action ActivateTerminalToolWindow<CR>
-nnoremap <Space><Tab> :action PreviousTab<CR>
-
-"   text editing
+nnoremap <Space>w- :action SplitHorizontally<CR>
+nnoremap <Space>wj :action NextSplitter<CR>
+nnoremap <Space>wk :action PrevSplitter<CR>
+nnoremap <Space>wl :action NextSplitter<CR>
+nnoremap <Space>wh :action PrevSplitter<CR>
+" navigation
+nnoremap <Space><Tab> :action Back<CR>
+" text editing
 nmap <Space>;; :action CommentByLineComment<CR>
 vmap <Space>;; :action CommentByLineComment<CR>
-
-"  misc
+" misc
 nnoremap <Space><Space> :action GotoAction<CR>
-
 " AceJump
 nnoremap <Space>jj :action AceAction<CR>
 nnoremap <Space>jl :action AceLineAction<CR>
 nnoremap <Space>jw :action AceTargetAction<CR>
+" git
+nnoremap <Space>gl :action ActivateVersionControlToolWindow<CR>
+nnoremap <Space>gs :action ActivateCommitToolWindow<CR>
+" project
+nnoremap <Space>pp :action ActivateProjectToolWindow<CR>
+nnoremap <Space>pt :action ActivateTODOViewToolWindow<CR>
+nnoremap <Space>pr :action ActivateRunToolWindow<CR>
+nnoremap <Space>ps :action ActivateFindToolWindow<CR>
+nnoremap <Space>pe :action ActivateProblemsViewToolWindow<CR>
+nnoremap <Space>el :action ActivateProblemsViewToolWindow<CR>
+nnoremap <Space>pm :action ActivateMessagesToolWindow<CR>
+nnoremap <Space>pd :action ActivateDatabaseToolWindow<CR>
+nnoremap <Space>pn :action ActivateNotificationsToolWindow<CR>
+nnoremap <Space>tt :action ActivateTerminalToolWindow<CR>
 
 set easymotion
 source ~/.vimrc
