@@ -1,3 +1,6 @@
+" vimrc
+nnoremap <Space>ve :e ~/.ideavimrc<CR>
+nnoremap <Space>vr :action IdeaVim.ReloadVimRc.reload<CR>
 " buffers
 nnoremap <Space>bb :action RecentFiles<CR>
 nnoremap <Space>bs :action Switcher<CR>
@@ -40,6 +43,42 @@ nnoremap <Space>pm :action ActivateMessagesToolWindow<CR>
 nnoremap <Space>pd :action ActivateDatabaseToolWindow<CR>
 nnoremap <Space>pn :action ActivateNotificationsToolWindow<CR>
 nnoremap <Space>tt :action ActivateTerminalToolWindow<CR>
+" select words
+nnoremap <Space>sg :action EditorSelectWord<CR>
+nnoremap <Space>ss :action EditorUnSelectWord<CR>
+" Clojure
+nnoremap <Space>kl :action :cursive.actions.paredit/slurp-forwards<CR>
+nnoremap <Space>kj :action :cursive.actions.paredit/barf-forwards<CR>
+nnoremap <Space>kh :action :cursive.actions.paredit/slurp-backwards<CR>
+nnoremap <Space>kh :action :cursive.actions.paredit/slurp-backwards<CR>
+nnoremap <Space>sp :action :cursive.actions.paredit/splice<CR>
+nnoremap <Space>sr :action :cursive.actions.paredit/raise<CR>
+nnoremap <Space>sl :action :cursive.actions.paredit/forward<CR>
+nnoremap <Space>sh :action :cursive.actions.paredit/backward<CR>
+nnoremap <Space>sj :action :cursive.actions.paredit/forward-down<CR>
+nnoremap <Space>sJ :action :cursive.actions.paredit/forward-up<CR>
+nnoremap <Space>sk :action :cursive.actions.paredit/backward-up<CR>
+nnoremap <Space>sK :action :cursive.actions.paredit/backward-down<CR>
+nnoremap <Space>rf :action LoadFile<CR>
+nnoremap <Space>re :action RunContext<CR>
+nnoremap <Space>rt :action RunTests<CR>
+nnoremap <Space>rr :action Clojure.REPL<CR>
 
+" Core Vim feel
+set number
+set norelativenumber
+set scrolloff=8
+set ignorecase smartcase
+
+" Use system clipboard for y, d, p, etc.
+set clipboard+=unnamedplus
+
+" IdeaVim plugins
+set surround
+set multiple-cursors
+set commentary
+set argtextobj
 set easymotion
+set textobj-entire
+
 source ~/.vimrc
