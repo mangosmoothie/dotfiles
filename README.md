@@ -21,6 +21,17 @@ chsh -s $(which zsh)
 
 ## Quickstart
 
+You can run this from anywhere:
+
 ```
+source ~/projects/dotfiles/sync.sh
+```
+
+Or cd into the directory first:
+
+```
+cd ~/projects/dotfiles
 source sync.sh
 ```
+
+The script is now resilient to being sourced from the wrong directory (it will refuse to sync if the resolved directory doesn't contain a `.zshrc`).
