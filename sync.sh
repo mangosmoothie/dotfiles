@@ -60,7 +60,71 @@ rsync --exclude=".git/" \
       --exclude="sync.sh" \
       --exclude="README.md" \
       --exclude="LICENSE" \
+      --exclude="cursor/" \
       -avh --no-perms "$DOTFILES_DIR/" ~/
+
+# --- Cursor (VS Code-based) user config via symlink ---
+{
+    local cursor_user="$HOME/Library/Application Support/Cursor/User"
+    local cursor_dot="$DOTFILES_DIR/cursor"
+    local cursor_cli="/Applications/Cursor.app/Contents/Resources/app/bin/cursor"
+
+    if [[ -d $cursor_dot && -d $cursor_user ]]; then
+        echo "==> Linking Cursor settings from $cursor_dot ..."
+        for f in settings.json keybindings.json; do
+            if [[ -f $cursor_dot/$f ]]; then
+                # Back up a real file once if it isn't already our symlink
+                if [[ -e $cursor_user/$f && ! -L $cursor_user/$f ]]; then
+                    mv "$cursor_user/$f" "$cursor_user/${f}.bak.$(date +%Y%m%d%H%M%S)"
+                fi
+                ln -sfn "$cursor_dot/$f" "$cursor_user/$f"
+                echo "  linked $f"
+            fi
+        done
+
+        if [[ -x $cursor_cli && -f $cursor_dot/extensions.txt ]]; then
+            echo "==> Ensuring Cursor extensions from extensions.txt ..."
+            while IFS= read -r ext || [[ -n $ext ]]; do
+                [[ -z $ext || $ext == \#* ]] && continue
+                "$cursor_cli" --install-extension "$ext" >/dev/null && echo "  $ext" || echo "  (failed: $ext)"
+            done < "$cursor_dot/extensions.txt"
+        fi
+
+        # Glass/agent window keybindings live in Cursor's state DB, not settings.json.
+        # Without keybindings=vim, Glass disables VSCodeVim (known Cursor bug/behavior).
+        local glass_prefs="$cursor_dot/glass-editor-preferences.json"
+        local state_db="$cursor_user/globalStorage/state.vscdb"
+        if [[ -f $glass_prefs && -f $state_db ]]; then
+            echo "==> Setting Glass editor keybindings preference (vim) ..."
+            python3 - "$glass_prefs" "$state_db" <<'PY' && echo "  cursor/glass.editorPreferences updated" || echo "  (skipped: could not update state.vscdb)"
+import json, sqlite3, sys
+prefs_path, db_path = sys.argv[1], sys.argv[2]
+desired = json.load(open(prefs_path))
+key = "cursor/glass.editorPreferences"
+con = sqlite3.connect(db_path, timeout=10)
+cur = con.cursor()
+row = cur.execute("select value from ItemTable where key=?", (key,)).fetchone()
+merged = dict(desired)
+if row:
+    try:
+        existing = json.loads(row[0])
+        if isinstance(existing, dict):
+            merged = {**existing, **desired}
+    except Exception:
+        pass
+value = json.dumps(merged, separators=(",", ":"))
+cur.execute(
+    "insert into ItemTable(key,value) values(?,?) on conflict(key) do update set value=excluded.value",
+    (key, value),
+)
+con.commit()
+con.close()
+PY
+        fi
+    else
+        echo "==> Skipping Cursor link (missing $cursor_dot or $cursor_user)"
+    fi
+}
 
 source "$HOME/.zshenv" 2>/dev/null || true
 source "$HOME/.zshrc" 2>/dev/null || true

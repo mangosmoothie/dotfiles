@@ -1,0 +1,182 @@
+{
+  "window.autoDetectColorScheme": true,
+
+  "vim.leader": "<space>",
+  "vim.disableExtension": false,
+  "vim.easymotion": true,
+  "vim.surround": true,
+  "vim.hlsearch": true,
+  "vim.ignorecase": true,
+  "vim.smartcase": true,
+  "vim.useSystemClipboard": true,
+  "vim.timeout": 400,
+  "vim.vimrc.enable": true,
+  "vim.vimrc.path": "~/.vimrc",
+
+  "editor.lineNumbers": "on",
+  "editor.cursorSurroundingLines": 8,
+
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["f", "d"],
+      "after": ["<Esc>"]
+    }
+  ],
+
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<leader>", "v", "e"],
+      "commands": ["workbench.action.openSettingsJson"]
+    },
+    {
+      "before": ["<leader>", "v", "r"],
+      "commands": ["workbench.action.reloadWindow"]
+    },
+
+    {
+      "before": ["<leader>", "b", "b"],
+      "commands": ["workbench.action.showAllEditors"]
+    },
+    {
+      "before": ["<leader>", "b", "s"],
+      "commands": ["workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup"]
+    },
+
+    {
+      "before": ["<leader>", "f", "f"],
+      "commands": ["workbench.action.quickOpen"]
+    },
+    {
+      "before": ["<leader>", "p", "f"],
+      "commands": ["workbench.action.quickOpen"]
+    },
+    {
+      "before": ["<leader>", "s", "p"],
+      "commands": ["workbench.action.findInFiles"]
+    },
+    {
+      "before": ["<leader>", "s", "s"],
+      "commands": ["workbench.action.files.saveAll"]
+    },
+
+    {
+      "before": ["<leader>", "w", "q"],
+      "commands": ["workbench.action.closeActiveEditor"]
+    },
+    {
+      "before": ["<leader>", "q", "q"],
+      "commands": ["workbench.action.closeActiveEditor"]
+    },
+    {
+      "before": ["<leader>", "w", "/"],
+      "commands": ["workbench.action.splitEditorRight"]
+    },
+    {
+      "before": ["<leader>", "w", "-"],
+      "commands": ["workbench.action.splitEditorDown"]
+    },
+    {
+      "before": ["<leader>", "w", "j"],
+      "commands": ["workbench.action.focusBelowGroup"]
+    },
+    {
+      "before": ["<leader>", "w", "k"],
+      "commands": ["workbench.action.focusAboveGroup"]
+    },
+    {
+      "before": ["<leader>", "w", "l"],
+      "commands": ["workbench.action.focusRightGroup"]
+    },
+    {
+      "before": ["<leader>", "w", "h"],
+      "commands": ["workbench.action.focusLeftGroup"]
+    },
+
+    {
+      "before": ["<leader>", "f", "c"],
+      "commands": ["editor.action.formatDocument"]
+    },
+    {
+      "before": ["<leader>", "o", "i"],
+      "commands": ["editor.action.organizeImports"]
+    },
+
+    {
+      "before": ["<leader>", "<tab>"],
+      "commands": ["workbench.action.navigateBack"]
+    },
+
+    {
+      "before": ["<leader>", ";", ";"],
+      "commands": ["editor.action.commentLine"]
+    },
+
+    {
+      "before": ["<leader>", "<leader>"],
+      "commands": ["workbench.action.showCommands"]
+    },
+
+    {
+      "before": ["<leader>", "j", "j"],
+      "after": ["<leader>", "<leader>", "s"]
+    },
+    {
+      "before": ["<leader>", "j", "l"],
+      "after": ["<leader>", "<leader>", "<leader>", "b", "d", "j", "k"]
+    },
+    {
+      "before": ["<leader>", "j", "w"],
+      "after": ["<leader>", "<leader>", "w"]
+    },
+    {
+      "before": ["<leader>", "j", "k"],
+      "after": ["<leader>", "<leader>", "k"]
+    },
+
+    {
+      "before": ["<leader>", "g", "l"],
+      "commands": ["workbench.view.scm"]
+    },
+    {
+      "before": ["<leader>", "g", "s"],
+      "commands": ["workbench.view.scm"]
+    },
+
+    {
+      "before": ["<leader>", "p", "p"],
+      "commands": ["workbench.view.explorer"]
+    },
+    {
+      "before": ["<leader>", "p", "e"],
+      "commands": ["workbench.actions.view.problems"]
+    },
+    {
+      "before": ["<leader>", "e", "l"],
+      "commands": ["workbench.actions.view.problems"]
+    },
+    {
+      "before": ["<leader>", "p", "s"],
+      "commands": ["workbench.action.findInFiles"]
+    },
+    {
+      "before": ["<leader>", "t", "t"],
+      "commands": ["workbench.action.terminal.toggleTerminal"]
+    },
+
+    {
+      "before": ["<leader>", "s", "g"],
+      "commands": ["editor.action.smartSelect.expand"]
+    },
+    {
+      "before": ["<leader>", "s", "G"],
+      "commands": ["editor.action.smartSelect.shrink"]
+    }
+  ],
+
+  "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<leader>", ";", ";"],
+      "commands": ["editor.action.commentLine"]
+    }
+  ]
+}

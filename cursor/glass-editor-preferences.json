@@ -1,0 +1,13 @@
+{
+  "lineNumbersVisible": true,
+  "wordWrapEnabled": false,
+  "keybindings": "vim",
+  "cursorTabEnabled": true,
+  "fileTreeSidebarExpanded": true,
+  "fileTreeSidebarExpandedExplicitlySet": false,
+  "fileTreeSidebarWidth": 220,
+  "diffTreeSidebarExpanded": false,
+  "diffTreeSidebarWidth": 220,
+  "diffViewMode": "unified",
+  "diffIgnoreWhitespace": false
+}
